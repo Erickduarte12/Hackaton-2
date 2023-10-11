@@ -51,11 +51,19 @@ public class Main {
                     System.out.println("Espacios disponibles :" + miAgenda.espaciosLibres());
                     break;
             }
+            System.out.println();
+            System.out.println();
+            System.out.println("0, Para salir");
+            System.out.println("1. Agregar contacto");
+            System.out.println("2. Mostrar mis contactos");
+            System.out.println("3. Eliminar Contacto");
+            System.out.println("4. Buscar contacto");
+            System.out.println("5. Espacios disponibles");
+
             System.out.println("Escoge otra opcion");
             eleccion = sc.nextInt();
         }while (eleccion != 0 && eleccion >= 0 && eleccion < 6);
 
         System.out.println("Adios");
-
     }
 }

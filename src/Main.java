@@ -1,20 +1,23 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hola equipo ganador");
-        Contacto contacto1 =  new Contacto("Juan", "Pérez");
 
-        Contacto[] personas = new Contacto[10];
-        personas[0] = new Contacto("Juan", "Pérez");
-        personas[1] = new Contacto("María", "González");
-        personas[2] = new Contacto("Carlos", "Rodríguez");
-        personas[3] = new Contacto("Ana", "López");
-        personas[4] = new Contacto("Luis", "Martínez");
-        personas[5] = new Contacto("Laura", "Hernández");
-        personas[6] = new Contacto("Pedro", "Sánchez");
-        personas[7] = new Contacto("Elena", "Ramírez");
-        personas[8] = new Contacto("Javier", "Torres");
-        personas[9] = new Contacto("Sofía", "Díaz");
+        /*Creacion Agenda telefonica*/
+        AgendaTelefonica miAgenda = new AgendaTelefonica(10);
 
-        contacto1.equals(personas);
+        /*Creacion de mis contactos*/
+        Contacto contacto1 = new Contacto("Bryan","Andres");
+        Contacto contacto2 = new Contacto("Erick","Duarte");
+        Contacto contacto3 = new Contacto("Jasmin","LLeras");
+
+        /*Añadir contactos a la agenda*/
+        miAgenda.añadirContacto(contacto1);
+        miAgenda.añadirContacto(contacto2);
+        miAgenda.añadirContacto(contacto1);
+
+        /*Listar contactos*/
+        miAgenda.listarContactos();
+
+        /*Buscar contactos*/
+        System.out.println(miAgenda.buscaContacto("Erick"));
     }
 }

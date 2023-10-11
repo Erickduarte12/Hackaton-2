@@ -30,10 +30,8 @@ class Contacto {
             if (obj == null || getClass() != obj.getClass()) {
                 return false;
             }
-
             Contacto contacto = (Contacto) obj;
             System.out.println(contacto);
-
             return nombre.equals(contacto.nombre) && apellido.equals(contacto.apellido);
         }
 }

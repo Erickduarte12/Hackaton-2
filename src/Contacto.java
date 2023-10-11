@@ -1,11 +1,12 @@
 class Contacto {
         private String nombre;
         private String apellido;
-        private String telefono = "3112535030";
+        private String telefono;
 
-        public Contacto(String nombre, String apellido) {
-            this.nombre = nombre;
-            this.apellido = apellido;
+        public Contacto(String nombre, String apellido, String telefono) {
+            this.nombre = nombre.toLowerCase();
+            this.apellido = apellido.toLowerCase();
+            this.telefono = telefono;
         }
 
         public String getNombre() {
@@ -31,7 +32,6 @@ class Contacto {
                 return false;
             }
             Contacto contacto = (Contacto) obj;
-            System.out.println(contacto);
             return nombre.equals(contacto.nombre) && apellido.equals(contacto.apellido);
         }
 }

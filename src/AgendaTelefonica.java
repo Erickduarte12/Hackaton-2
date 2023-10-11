@@ -27,10 +27,6 @@ class AgendaTelefonica {
         return listaContactos.size() >= capacidad;
     }
 
-    public boolean existeContacto(Contacto c) {
-        return listaContactos.contains(c);
-    }
-
     public void listarContactos() {
         System.out.println("Lista de contactos:");
         for (Contacto c : listaContactos) {
@@ -38,14 +34,14 @@ class AgendaTelefonica {
         }
     }
 
-    public Contacto buscaContacto(String nombre) {
-        int contador = 0;
+    public void buscaContacto(String nombre) {
         for (Contacto c : listaContactos) {
             if (c.getNombre().equals(nombre)) {
-                contador++;
+                System.out.println(c.getNombre() +" - "+ c.getApellido() +" - "+ c.getTelefono());
+            }else {
+                System.out.println("Contacto no encontrado");
             }
         }
-        return null; // Contacto no encontrado
     }
 
     public boolean eliminarContacto(Contacto c){
